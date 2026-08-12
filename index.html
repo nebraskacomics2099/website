@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nebraska Comics | Lincoln, NE – Buy • Sell • Trade</title>
+  <meta name="description" content="Nebraska Comics inside Timeless Treasures – full runs, graded slabs, $1 bins, key issues. Buy, sell, trade comics of all eras in Lincoln, Nebraska.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Comic Neue', system-ui, sans-serif;
+      background: #1a1a1a;
+      color: #111;
+      line-height: 1.5;
+    }
+
+    /* Comic page wrapper */
+    .page {
+      max-width: 920px;
+      margin: 30px auto;
+      background: #f8f1e3; /* aged comic paper */
+      border: 8px solid #111;
+      box-shadow: 12px 12px 0 #ff1a1a;
+      position: relative;
+    }
+
+    /* Header / Masthead */
+    header {
+      background: #111;
+      color: white;
+      padding: 30px 20px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,26,26,0.07) 10px,
+        rgba(255,26,26,0.07) 20px
+      );
+    }
+
+    .logo-wrap {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto;
+      background: #000;
+      border: 5px solid #ff1a1a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bangers', cursive;
+      flex-direction: column;
+      line-height: 1;
+      box-shadow: 0 0 0 4px #111, 0 0 20px rgba(255,26,26,0.6);
+    }
+
+    .logo .top { color: white; font-size: 22px; letter-spacing: 2px; }
+    .logo .n { color: #ff1a1a; font-size: 72px; margin: -8px 0; }
+    .logo .bottom { color: #ff1a1a; font-size: 24px; letter-spacing: 3px; }
+
+    h1 {
+      font-family: 'Bangers', cursive;
+      font-size: 3.4rem;
+      color: #ff1a1a;
+      text-shadow: 4px 4px 0 #000;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: #eee;
+      margin-top: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Content panels */
+    .panels {
+      padding: 30px 25px 40px;
+      display: grid;
+      gap: 25px;
+    }
+
+    .panel {
+      background: white;
+      border: 4px solid #111;
+      padding: 22px;
+      position: relative;
+      box-shadow: 6px 6px 0 #ff1a1a;
+    }
+
+    .panel h2 {
+      font-family: 'Bangers', cursive;
+      font-size: 1.9rem;
+      color: #ff1a1a;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      border-bottom: 3px solid #111;
+      padding-bottom: 6px;
+      display: inline-block;
+    }
+
+    .panel p, .panel li {
+      font-size: 1.1rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .service {
+      background: #fff8e7;
+      border: 3px solid #111;
+      padding: 14px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .service span {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }
+
+    /* Hours table */
+    .hours {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .hours td {
+      padding: 8px 12px;
+      border-bottom: 2px solid #ddd;
+      font-size: 1.1rem;
+    }
+    .hours tr:last-child td { border-bottom: none; }
+    .hours td:last-child { text-align: right; font-weight: 700; }
+
+    /* CTA buttons */
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff1a1a;
+      color: white !important;
+      font-family: 'Bangers', cursive;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      padding: 12px 22px;
+      border: 3px solid #111;
+      text-decoration: none !important;
+      box-shadow: 4px 4px 0 #111;
+      transition: all 0.15s;
+    }
+
+    .btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 #111;
+    }
+
+    .btn.outline {
+      background: white;
+      color: #111 !important;
+    }
+
+    /* Contact */
+    .contact-line {
+      font-size: 1.2rem;
+      margin: 8px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.95rem;
+    }
+
+    footer a { color: #ff1a1a; }
+
+    @media (max-width: 600px) {
+      .page { margin: 10px; box-shadow: 6px 6px 0 #ff1a1a; }
+      h1 { font-size: 2.4rem; }
+      .logo { width: 130px; height: 130px; }
+      .logo .n { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- MASTHEAD -->
+    <header>
+      <div class="logo-wrap">
+        <div class="logo">
+          <div class="top">NEBRASKA</div>
+          <div class="n">N</div>
+          <div class="bottom">COMICS</div>
+        </div>
+      </div>
+      <h1>NEBRASKA COMICS</h1>
+      <p class="tagline">Comics of all eras • Full runs • Graded slabs • $1 bins • Key issues</p>
+    </header>
+
+    <div class="panels">
+
+      <!-- WHAT WE DO -->
+      <div class="panel">
+        <h2>WHAT WE DO</h2>
+        <p>Your local stop inside <strong>Timeless Treasures</strong> for modern blockbusters, vintage treasures, and everything in between.</p>
+        
+        <div class="services">
+          <div class="service"><span>📚</span>Full Runs</div>
+          <div class="service"><span>💎</span>CGC Slabs</div>
+          <div class="service"><span>🔑</span>Key Issues</div>
+          <div class="service"><span>💵</span>$1 Bins</div>
+          <div class="service"><span>🔧</span>Pressing</div>
+          <div class="service"><span>🔄</span>Buy / Sell / Trade</div>
+        </div>
+      </div>
+
+      <!-- HOURS -->
+      <div class="panel">
+        <h2>HOURS</h2>
+        <table class="hours">
+          <tr><td>Monday – Saturday</td><td>10:00 AM – 6:00 PM</td></tr>
+          <tr><td>Sunday</td><td>12:00 PM – 5:00 PM</td></tr>
+        </table>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="panel">
+        <h2>FIND US</h2>
+        <p style="font-size:1.25rem; margin-bottom:12px;">
+          <strong>Inside Timeless Treasures</strong><br>
+          1717 O Street<br>
+          Lincoln, NE 68508
+        </p>
+        <div class="btn-row">
+          <a href="https://maps.google.com/?q=1717+O+St,+Lincoln,+NE+68508" target="_blank" class="btn">GET DIRECTIONS</a>
+        </div>
+      </div>
+
+      <!-- CONTACT + SOCIALS -->
+      <div class="panel">
+        <h2>HIT US UP</h2>
+        <p class="contact-line">📧 <a href="mailto:Contact@nebraskacomics.com">Contact@nebraskacomics.com</a></p>
+        <p class="contact-line">📱 Text: <a href="sms:4028536321">402-853-6321</a></p>
+
+        <div class="btn-row" style="margin-top:20px;">
+          <a href="https://x.com/NebraskaComics1" target="_blank" class="btn outline">X / TWITTER</a>
+          <a href="#" target="_blank" class="btn outline">FACEBOOK</a>
+          <a href="#" target="_blank" class="btn outline">YOUTUBE</a>
+          <a href="#" target="_blank" class="btn outline">DISCORD</a>
+          <a href="#" target="_blank" class="btn">HIPCOMIC STORE</a>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>© 2026 Nebraska Comics · Lincoln, Nebraska</p>
+      <p style="margin-top:6px;">Always hunting for collections • Restocked weekly</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
