@@ -272,11 +272,11 @@
         <p>📱 Text: <a href="sms:4028536321">402-853-6321</a></p>
       </div>
       <div style="margin-top: 24px;">
-        <a href="https://www.facebook.com/" target="_blank" class="btn btn-outline">Facebook</a>
+        <a href="https://www.facebook.com/people/Nebraska-Comics/61592087632747/?sk=reels_tab" target="_blank" class="btn btn-outline">Facebook</a>
         <a href="https://www.youtube.com/" target="_blank" class="btn btn-outline">YouTube</a>
-        <a href="https://x.com/Nebraska_comics" target="_blank" class="btn btn-outline">X / Twitter</a>
+        <a href="https://x.com/NebraskaComics1" target="_blank" class="btn btn-outline">X / Twitter</a>
         <a href="#" target="_blank" class="btn btn-outline">Discord</a>
-        <a href="#" target="_blank" class="btn">Shop on HipComic</a>
+        <a href="https://www.hipcomic.com/myc/@nebraskacomics2099" target="_blank" class="btn">Shop on HipComic</a>
       </div>
     </section>
 
